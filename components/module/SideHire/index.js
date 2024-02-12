@@ -8,7 +8,7 @@ const SideHire = () => {
       <div className="p-10">
         <div className="relative w-[10vw] h-[10vw] mx-auto">
           <Image
-            src={user?.photo}
+            src=""
             alt="avatar"
             fill
             className="rounded-full object-cover"
@@ -16,21 +16,21 @@ const SideHire = () => {
         </div>
 
         <div className="text-sm">
-          <h4 className="text-2xl font-semibold mt-5">{user?.name}</h4>
+          <h4 className="text-2xl font-semibold mt-5">budi</h4>
 
-          <p className="mt-2">{user?.job_title}</p>
+          <p className="mt-2">software engineer</p>
 
-          {user?.region && (
-            <h6 className="flex  items-center gap-2 my-5 text-gray-400">
-              <FaMapPin className="w-[1.5vw] h-[1.5vw]" /> {user?.region}
-            </h6>
-          )}
+          {/* {user?.region && ( */}
+          <h6 className="flex  items-center gap-2 my-5 text-gray-400">
+            <FaMapPin className="w-[1.5vw] h-[1.5vw]" /> jakarta
+          </h6>
+          {/* )} */}
 
-          <p className="text-gray-400">{user?.description}</p>
+          <p className="text-gray-400"></p>
         </div>
 
         <div className="mt-8">
-          {skills?.length > 0 ? (
+          {/* {skills?.length > 0 ? (
             <>
               <h5 className="text-2xl font-semibold">Skill</h5>
 
@@ -47,7 +47,7 @@ const SideHire = () => {
             </>
           ) : (
             ""
-          )}
+          )} */}
         </div>
       </div>
     </section>
