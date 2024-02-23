@@ -1,17 +1,20 @@
-// "use client"
+// "use client";
 import React from "react";
 import SearchBar from "../SearchBar";
 import Link from "next/link";
 import Image from "next/image";
 import { FaMapPin } from "react-icons/fa";
-import { getWorkers } from "@/services/worker";
-import { getSkills } from "@/services/skill";
+// import { getWorkers } from "@/services/worker";
+// import { getSkills } from "@/services/skill";
 
-const HomeSection = async () => {
+const HomeSection = async ({ dataWorkers, dataSkills }) => {
   // const [skills, setSkills] = useState([]);
 
-  const workerData = await getWorkers();
-  const skillData = await getSkills();
+  // const workerData = await getWorkers();
+  // const skillData = await getSkills();
+
+  const workerData = await dataWorkers;
+  const skillData = await dataSkills;
   return (
     <section className="pt-12 bg-[#F6F7F8] min-h-screen">
       <div className="w-[87vw] px-10 rounded-sm justify-center  mx-auto grid h-13 py-1 items-center">

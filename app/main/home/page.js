@@ -1,7 +1,11 @@
 import HomeSection from "@/components/module/HomeSection";
 import React from "react";
+import { getWorkers } from "@/services/worker";
+import { getSkills } from "@/services/skill";
 
 const Home = () => {
+  const dataWorkers = getWorkers();
+  const dataSkills = getSkills();
   return (
     <main>
       <div className="bg-[#5E50A1] text-white  py-3">
@@ -9,7 +13,7 @@ const Home = () => {
           Top Jobs
         </h1>
       </div>
-      <HomeSection />
+      <HomeSection dataWorkers={dataWorkers} dataSkills={dataSkills} />
     </main>
   );
 };

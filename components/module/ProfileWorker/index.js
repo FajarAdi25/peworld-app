@@ -15,7 +15,7 @@ const ProfileWorker = async () => {
     <section className="w-[80vw] lg:w-[50vw] mx-auto justify-center text-center grid  text-gray-400 -mt-[5vw] pb-14 sm:pb-20">
       <div className="relative w-[20vw] h-[20vw] sm:w-[10vw] sm:h-[10vw] mx-auto">
         <Image
-          src=""
+          src="/assets/images/avatar1.png"
           alt="avatar"
           fill
           className="object-cover rounded-full "
