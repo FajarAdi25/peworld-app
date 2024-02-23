@@ -30,24 +30,24 @@ The Peworld project is built using the following technologies:
     <td>Profile Page</td>
   </tr>
    <tr>
-    <td><img width="350px" src="./screenshot/Home.png" border="0" alt="Login" /></td>
-    <td> <img width="350px" src="./screenshot/profile.png" border="0"  alt="Register" /></td>
+    <td><img width="350px" src="./screenshot/home.PNG" border="0" alt="Login" /></td>
+    <td> <img width="350px" src="./screenshot/profile.PNG" border="0"  alt="Register" /></td>
   </tr>
    <tr>
     <td>Login Page</td>
     <td>Register Page</td>
   </tr>
    <tr>
-    <td><img width="350px" src="./screenshot/Login.jpeg" border="0" alt="Login" /></td>
-    <td> <img width="350px" src="./screenshot/Register.jpeg" border="0"  alt="Register" /></td>
+    <td><img width="350px" src="./screenshot/login.PNG" border="0" alt="Login" /></td>
+    <td><img width="350px" src="./screenshot/register.PNG" border="0"  alt="Register" /></td>
   </tr>
    <tr>
-<!--     <td>Jobs List Page</td>
-<!--     <td>Contact Page</td> --> -->
+    <td>Jobs List Page</td>
+<!--     <td>Contact Page</td> -->
   </tr>
    <tr>
-<!--     <td><img width="350px" src="./screenshot/Jobs.png" border="0" alt="Jobs" /></td>
-<!--     <td><img width="350px" src="./screenshot/Contactt.jpeg" border="0" alt="Contact" /></td> --> -->
+    <td><img width="350px" src="./screenshot/homeJob.PNG" border="0" alt="Jobs" /></td>
+<!--    <td><img width="350px" src="./screenshot/Contactt.jpeg" border="0" alt="Contact" /></td> -->
   </tr>
 </table>
 
