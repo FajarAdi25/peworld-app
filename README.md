@@ -54,7 +54,7 @@ The Peworld project is built using the following technologies:
   </tr>
    <tr>
     <td><img width="350px" src="./screenshot/homeJob.PNG" border="0" alt="Jobs" /></td>
-    <td><img width="350px" src="./screenshot/editWorker.PNG" border="0" alt="" /></td>
+    <td><img width="350px" src="./screenshot/editRecruiter.PNG" border="0" alt="" /></td>
   </tr>
 </table>
 
