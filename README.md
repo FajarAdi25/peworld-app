@@ -41,13 +41,20 @@ The Peworld project is built using the following technologies:
     <td><img width="350px" src="./screenshot/login.PNG" border="0" alt="Login" /></td>
     <td><img width="350px" src="./screenshot/register.PNG" border="0"  alt="Register" /></td>
   </tr>
+<!--     <td>Edit Page</td>
+    <td>Register Page</td>
+  </tr>
+   <tr>
+    <td><img width="350px" src="./screenshot/editWorker.PNG" border="0" alt="" /></td>
+    <td><img width="350px" src="./screenshot/register.PNG" border="0"  alt="Register" /></td>
+  </tr> -->
    <tr>
     <td>Jobs List Page</td>
-<!--     <td>Contact Page</td> -->
+    <td>Edit Page</td>
   </tr>
    <tr>
     <td><img width="350px" src="./screenshot/homeJob.PNG" border="0" alt="Jobs" /></td>
-<!--    <td><img width="350px" src="./screenshot/Contactt.jpeg" border="0" alt="Contact" /></td> -->
+    <td><img width="350px" src="./screenshot/editWorker.PNG" border="0" alt="" /></td>
   </tr>
 </table>
 
