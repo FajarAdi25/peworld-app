@@ -27,11 +27,11 @@ The Peworld project is built using the following technologies:
 <table>
    <tr>
     <td>Home Page</td>
-    <td>Profile Page</td>
+    <td>Candidate Page</td>
   </tr>
    <tr>
     <td><img width="350px" src="./screenshot/home.PNG" border="0" alt="Login" /></td>
-    <td> <img width="350px" src="./screenshot/profile.PNG" border="0"  alt="Register" /></td>
+    <td> <img width="350px" src="./screenshot/homeJob.PNG" border="0"  alt="Register" /></td>
   </tr>
    <tr>
     <td>Login Page</td>
@@ -41,20 +41,28 @@ The Peworld project is built using the following technologies:
     <td><img width="350px" src="./screenshot/login.PNG" border="0" alt="Login" /></td>
     <td><img width="350px" src="./screenshot/register.PNG" border="0"  alt="Register" /></td>
   </tr>
-<!--     <td>Edit Page</td>
-    <td>Register Page</td>
+    <td>Profile Worker Page</td>
+    <td>Edit Profile Worker Page</td>
   </tr>
    <tr>
-    <td><img width="350px" src="./screenshot/editWorker.PNG" border="0" alt="" /></td>
-    <td><img width="350px" src="./screenshot/register.PNG" border="0"  alt="Register" /></td>
+    <td><img width="350px" src="./screenshot/profile.PNG" border="0" alt="" /></td>
+    <td><img width="350px" src="./screenshot/editWorker.PNG" border="0"  alt="Register" /></td>
+  </tr>
+   <tr>
+    <td>Profile Recruiter Page</td>
+    <td>Edit Profile Recruiter Page</td>
+  </tr>
+   <tr>
+    <td><img width="350px" src="./screenshot/recruiterProfile.PNG" border="0" alt="Jobs" /></td>
+    <td><img width="350px" src="./screenshot/editRecruiter.PNG" border="0" alt="" /></td>
+  </tr>
+   <tr>
+    <td>Hire Page</td>
+<!--     <td>Edit Profile Recruiter Page</td>
   </tr> -->
    <tr>
-    <td>Jobs List Page</td>
-    <td>Edit Page</td>
-  </tr>
-   <tr>
-    <td><img width="350px" src="./screenshot/homeJob.PNG" border="0" alt="Jobs" /></td>
-    <td><img width="350px" src="./screenshot/editRecruiter.PNG" border="0" alt="" /></td>
+    <td><img width="350px" src="./screenshot/hire.PNG" border="0" alt="Jobs" /></td>
+<!--     <td><img width="350px" src="./screenshot/editRecruiter.PNG" border="0" alt="" /></td> -->
   </tr>
 </table>
 
