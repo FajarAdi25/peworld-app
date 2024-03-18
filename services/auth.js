@@ -12,6 +12,9 @@ export const login = async (form) => {
     //   throw "tidak oke";
     // }
     const data = await response.json();
+    localStorage.setItem("token", data.data.token);
+    // localStorage.setItem("role", data.data.role);
+    // console.log(data);
     return data;
   } catch (error) {
     console.log(error);

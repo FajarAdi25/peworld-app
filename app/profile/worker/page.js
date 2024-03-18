@@ -5,7 +5,9 @@ import ProfileWorker from "@/components/module/ProfileWorker";
 import React from "react";
 import { FaPencilAlt } from "react-icons/fa";
 
-const DetailWorker = () => {
+const DetailWorker = async () => {
+  // const userData = await getProfile();
+  // const skillData = await getSkills();
   return (
     <main className="bg-[#9EA0A5]/30 w-screen grid justify-center pt-20 pb-40">
       <div className="bg-[#5E50A1] w-[87vw] h-[20vw] grid justify-end items-end rounded-t-lg ">

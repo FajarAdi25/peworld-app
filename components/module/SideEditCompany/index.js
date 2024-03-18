@@ -9,7 +9,7 @@ const SideEditCompany = () => {
           <div className="grid justify-center gap-4">
             <div className="relative w-[10vw] h-[10vw] mx-auto">
               <Image
-                src="/assets/images/avatar1.png"
+                src="/assets/images/profilehr.jpg"
                 alt="avatar"
                 fill
                 className="object-cover rounded-full "

@@ -15,7 +15,7 @@ const ProfileCompany = () => {
     <section className="w-[80vw] lg:w-[50vw] mx-auto justify-center text-center grid  text-gray-400 -mt-[5vw] pb-20 ">
       <div className="relative w-[20vw] h-[20vw] sm:w-[10vw] sm:h-[10vw] mx-auto">
         <Image
-          src="/assets/images/avatar2.png"
+          src="/assets/images/profilehr.jpg"
           alt="avatar"
           fill
           className="object-cover rounded-full "
@@ -24,7 +24,7 @@ const ProfileCompany = () => {
       </div>
 
       <div>
-        <h5 className="text-black font-semibold text-2xl mt-5">Agus</h5>
+        <h5 className="text-black font-semibold text-2xl mt-5">Budi</h5>
 
         <h6 className="text-black mt-4">HR Specialist</h6>
         <h6 className="text-black">Pijar Company</h6>
@@ -44,16 +44,16 @@ const ProfileCompany = () => {
 
       <ul className="grid justify-center items-center mt-6 gap-2">
         <li className="flex gap-3 items-center">
-          <FaEnvelope className="w-5 h-5" /> agus@gmail.com
+          <FaEnvelope className="w-5 h-5" /> budi@gmail.com
         </li>
         <li className="flex gap-3 items-center">
-          <FaInstagram className="w-5 h-5" /> agus setiawan
+          <FaInstagram className="w-5 h-5" /> Budi Gunawan
         </li>
         <li className="flex gap-3 items-center">
           <FaPhone className="w-5 h-5" /> 0989271726372
         </li>
         <li className="flex gap-3 items-center">
-          <FaLinkedin className="w-5 h-5" /> agus Setiawan
+          <FaLinkedin className="w-5 h-5" /> Budi Gunawan
         </li>
       </ul>
     </section>

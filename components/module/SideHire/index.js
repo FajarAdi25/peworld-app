@@ -8,7 +8,7 @@ const SideHire = () => {
       <div className="p-10">
         <div className="relative w-[10vw] h-[10vw] mx-auto">
           <Image
-            src=""
+            src="/assets/images/crop.jpg"
             alt="avatar"
             fill
             className="rounded-full object-cover"
@@ -16,13 +16,13 @@ const SideHire = () => {
         </div>
 
         <div className="text-sm">
-          <h4 className="text-2xl font-semibold mt-5">budi</h4>
+          <h4 className="text-2xl font-semibold mt-5">Fajar Adi Prasetio</h4>
 
-          <p className="mt-2">software engineer</p>
+          <p className="mt-2">Software Engineer</p>
 
           {/* {user?.region && ( */}
           <h6 className="flex  items-center gap-2 my-5 text-gray-400">
-            <FaMapPin className="w-[1.5vw] h-[1.5vw]" /> jakarta
+            <FaMapPin className="w-[1.5vw] h-[1.5vw]" /> Jakarta
           </h6>
           {/* )} */}
 

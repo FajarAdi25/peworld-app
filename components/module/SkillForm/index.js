@@ -1,5 +1,5 @@
 "use client";
-import { addSkill, getSkills } from "@/services/skill";
+// import { addSkill, getSkills } from "@/services/skill";
 import React, { useEffect, useState } from "react";
 
 const SkillForm = () => {
@@ -7,10 +7,10 @@ const SkillForm = () => {
   const [skill, setSkill] = useState("");
   const handleAddSkill = async () => {
     try {
-      await addSkill(skill);
-      alert("berhasi menambahkan skilll");
-      handleGetSkill();
-      setSkill("");
+      // await addSkill(skill);
+      // alert("berhasi menambahkan skilll");
+      // handleGetSkill();
+      // setSkill("");
     } catch (error) {
       alert(error);
     }

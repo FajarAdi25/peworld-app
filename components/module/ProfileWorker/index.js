@@ -1,4 +1,5 @@
 import { getSkills } from "@/services/skill";
+import { getProfile } from "@/services/worker";
 // import { getDetailWorkers } from "@/services/worker";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,32 +9,45 @@ import { FaEnvelope, FaGithub, FaMapPin, FaPhone } from "react-icons/fa";
 const ProfileWorker = async () => {
   // const id = params.id;
   // const detailWorkerData = await getDetailWorkers(id);
+  const user = await getProfile();
   const skillData = await getSkills();
-  // console.log(detailWorkerData);
+  // console.log(skillData);
 
   return (
     <section className="w-[80vw] lg:w-[50vw] mx-auto justify-center text-center grid  text-gray-400 -mt-[5vw] pb-14 sm:pb-20">
       <div className="relative w-[20vw] h-[20vw] sm:w-[10vw] sm:h-[10vw] mx-auto">
-        <Image
-          src="/assets/images/avatar1.png"
-          alt="avatar"
-          fill
-          className="object-cover rounded-full "
-          style={{ objectPosition: "top" }}
-        />
+        {user.photo ? (
+          <Image
+            src={user.photo}
+            // src="/assets/images/avatar1.png"
+            alt="avatar"
+            fill
+            className="object-cover rounded-full "
+            style={{ objectPosition: "top" }}
+          />
+        ) : (
+          <Image
+            src="/assets/images/potoprofil.png"
+            alt="avatar"
+            fill
+            className="object-cover rounded-full "
+            style={{ objectPosition: "top" }}
+          />
+        )}
       </div>
 
       <div>
-        <h5 className="text-black font-semibold text-2xl mt-5">mike</h5>
+        <h5 className="text-black font-semibold text-2xl mt-5">{user.name}</h5>
 
-        <h6 className="text-black mt-2"></h6>
+        <h6 className="text-black mt-2">{user.job_desk}</h6>
         <h6 className="flex justify-center items-center gap-2 mt-2">
           <FaMapPin className="w-3 h-3" />
+          {user.domicile}
         </h6>
 
-        <h6 className="gap-2 mt-2"></h6>
+        <h6 className="gap-2 mt-2">{user.workplace}</h6>
 
-        <p className="mt-5"></p>
+        <p className="mt-5">{user.description}</p>
 
         <Link
           href={`/profile/worker/edit/`}
@@ -47,12 +61,12 @@ const ProfileWorker = async () => {
         <h3 className="text-black font-semibold text-2xl">Skill</h3>
 
         <div className="text-black sm:w-5/12 mx-auto justify-center flex flex-wrap gap-x-3 gap-y-4 text-sm mt-5">
-          {skillData?.data?.map((skillItem) => (
+          {skillData?.map((item, index) => (
             <span
-              key={skillItem?.id}
+              key={index}
               className="py-1 px-4 bg-[#fbb01799] hover:bg-[#FBB017] border border-[#FBB017] rounded"
             >
-              {skillItem?.skill_name}
+              {item.skill_name}
             </span>
           ))}
         </div>

@@ -1,7 +1,9 @@
 "use client";
 import { login } from "@/services/auth";
+import axios from "axios";
 import { useFormik } from "formik";
 import { useRouter } from "next/navigation";
+import Swal from "sweetalert2";
 import * as yup from "yup";
 
 const LoginForm = () => {
@@ -9,9 +11,16 @@ const LoginForm = () => {
   const loginUser = async (formData) => {
     try {
       await login(formData);
+      Swal.fire({
+        icon: "success",
+        title: "Login Success",
+      });
       router.push("/main/home");
     } catch (error) {
-      alert(error);
+      Swal.fire({
+        icon: "error",
+        title: "Login Failed",
+      });
     }
   };
 

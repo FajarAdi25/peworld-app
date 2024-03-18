@@ -10,7 +10,7 @@ const SideEditWorker = () => {
           <div className="grid justify-center gap-4">
             <div className="relative w-[10vw] h-[10vw] mx-auto">
               <Image
-                src="/assets/images/avatar2.png"
+                src="/assets/images/crop.jpg"
                 alt="avatar"
                 fill
                 className="object-cover rounded-full "
@@ -31,7 +31,7 @@ const SideEditWorker = () => {
           </div>
 
           <div className="text-sm">
-            <h4 className="text-2xl font-semibold mt-10">Budi</h4>
+            <h4 className="text-2xl font-semibold mt-10">Fajar Adi Prasetio</h4>
             <p className="mt-2">Sofware Engineer</p>
             <h6 className="flex  items-center gap-2 mt-5 text-gray-400">
               Freelance

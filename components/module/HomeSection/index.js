@@ -21,19 +21,27 @@ const HomeSection = async ({ dataWorkers, dataSkills }) => {
         <SearchBar />
 
         <div className="divide-y mt-12 divide-gray-300 w-[88%] mx-auto rounded-md overflow-hidden min-h-[85vh]">
-          {workerData?.data?.map((item) => (
+          {workerData?.map((item) => (
             <article
               className="flex justify-between bg-white px-6 py-9 items-center"
               key={item.id}
             >
               <div className="flex items-center justify-center gap-7">
                 <div className="w-[8vw] h-[8vw] relative mx-auto rounded-full ">
-                  {item.photo && (
+                  {item.photo ? (
                     <Image
                       src={item?.photo}
                       fill
                       alt=""
                       className="object-cover rounded-full absolute"
+                      style={{ objectPosition: "top" }}
+                    />
+                  ) : (
+                    <Image
+                      src="/assets/images/potoprofil.png"
+                      alt="avatar"
+                      fill
+                      className="object-cover rounded-full "
                       style={{ objectPosition: "top" }}
                     />
                   )}
@@ -52,12 +60,12 @@ const HomeSection = async ({ dataWorkers, dataSkills }) => {
 
                   <div className="text-white flex flex-wrap gap-x-3 gap-y-4 pr-4 text-sm mt-5">
                     {/* <p>bagian skill</p> */}
-                    {skillData?.data?.map((skillItem) => (
+                    {skillData.map((item, index) => (
                       <span
-                        key={skillItem?.id}
+                        key={index}
                         className="py-1 px-4 bg-[#fbb01799] hover:bg-[#FBB017] border border-[#FBB017] rounded"
                       >
-                        {skillItem?.skill_name}
+                        {item.skill_name}
                       </span>
                     ))}
                   </div>
