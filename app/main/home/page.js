@@ -6,6 +6,7 @@ import { getSkills } from "@/services/skill";
 const Home = () => {
   const dataWorkers = getWorkers();
   const dataSkills = getSkills();
+  console.log(dataWorkers);
   return (
     <main>
       <div className="bg-[#5E50A1] text-white  py-3">

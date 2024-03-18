@@ -15,6 +15,8 @@ const HomeSection = async ({ dataWorkers, dataSkills }) => {
 
   const workerData = await dataWorkers;
   const skillData = await dataSkills;
+  // console.log(workerData);
+
   return (
     <section className="pt-12 bg-[#F6F7F8] min-h-screen">
       <div className="w-[87vw] px-10 rounded-sm justify-center  mx-auto grid h-13 py-1 items-center">
