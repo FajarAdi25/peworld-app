@@ -4,12 +4,17 @@ import { useFormik } from "formik";
 import * as yup from "yup";
 import { useRouter } from "next/navigation";
 import { registerRecruiters } from "@/services/auth";
+import Swal from "sweetalert2";
 
 const RegisterFormForCompany = () => {
   const router = useRouter();
   const registerUser = async (formData) => {
     try {
       await registerRecruiters(formData);
+      Swal.fire({
+        icon: "success",
+        title: "Register Success",
+      });
       router.push("/auth/login");
     } catch (error) {
       alert(error);

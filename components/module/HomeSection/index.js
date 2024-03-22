@@ -11,11 +11,9 @@ import {
   FaSearch,
 } from "react-icons/fa";
 import { getWorkers } from "@/services/worker";
-import { useRouter } from "next/navigation";
 
 const HomeSection = () => {
   const [workerData, setWorkerData] = useState([]);
-  const router = useRouter();
   const [page, setPage] = useState(1);
   const [searchText, setSearchText] = useState("");
   const [sort, setSort] = useState("ASC");
