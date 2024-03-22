@@ -3,11 +3,14 @@
 // import SideEditCompany from "@/components/module/SideEditCompany";
 import { editRecruiter, getRecruiter } from "@/services/recruiter";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { FaMapPin, FaPen } from "react-icons/fa";
 import Swal from "sweetalert2";
 
 const EditCompany = () => {
+  const router = useRouter();
+
   const [recruiter, setRecruiter] = useState({});
   const [profile, setProfile] = useState({});
 
@@ -42,6 +45,7 @@ const EditCompany = () => {
         title: "Profile Updated",
       });
       getProfile();
+      router.push("/profile/company");
     } catch (err) {
       Swal.fire({
         icon: "error",

@@ -46,7 +46,18 @@ const AfterLogin = () => {
 
       <div className="gap-2 md:gap-9 flex text-gray-400">
         <button className="hover:bg-gray-50 px-1 rounded hidden sm:block">
-          <FaBell className="w-[4vw] h-[4vw] md:w-[2.5vw] md:h-[2.5vw] xl:w-[1.8vw] xl:h-[1.8vw]" />
+          <FaBell
+            className="w-[4vw] h-[4vw] md:w-[2.5vw] md:h-[2.5vw] xl:w-[1.8vw] xl:h-[1.8vw]"
+            onClick={() =>
+              router.push(
+                `/${
+                  getRole() === "worker"
+                    ? "main/notification/worker"
+                    : "main/notification/company"
+                }`
+              )
+            }
+          />
         </button>
         <button className="hover:bg-gray-50 px-1 rounded hidden sm:block">
           <FaEnvelope className="w-[4vw] h-[4vw] md:w-[2.5vw] md:h-[2.5vw] xl:w-[1.8vw] xl:h-[1.8vw]" />
