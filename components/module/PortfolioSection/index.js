@@ -8,17 +8,13 @@ const PortfolioSection = () => {
   const [portofolio, setPortofolio] = useState([]);
 
   const getPortofolio = async () => {
-    const res = await axios.get("/v1/portfolio");
-    setPortofolio(res.data.data);
+    const result = await axios.get("/v1/portfolio");
+    setPortofolio(result.data.data);
   };
-
-  useEffect(() => {
-    getPortofolio();
-  }, []);
 
   const deletePortfolio = async (id) => {
     try {
-      await axios.delete(`/v1/portfolio/${id}`, { withCredentials: true });
+      await axios.delete(`/v1/portfolio/${id}`);
       Swal.fire({
         icon: "success",
         title: "Portofolio has been deleted",
@@ -31,13 +27,15 @@ const PortfolioSection = () => {
       });
     }
   };
-
+  useEffect(() => {
+    getPortofolio();
+  }, []);
   return (
     <div className="flex flex-wrap gap-x-4 gap-y-6">
       {portofolio?.map((item) => (
         <article className="relative" key={item.id}>
           <button
-            className="absolute z-[1] -right-[0.5vw] -top-[0.6vw] bg-red-600 hover:bg-red-600/80 text-gray-200 px-[0.7vw] h-[2vw] pb-1 flex justify-center items-center rounded-full"
+            className="absolute z-[1] -right-[0.3vw] -top-[0.6vw] bg-red-600 hover:bg-red-600/80 text-gray-200 px-[0.7vw] h-[2vw] pb-1 flex justify-center items-center rounded-full"
             onClick={() => deletePortfolio(item?.id)}
           >
             x

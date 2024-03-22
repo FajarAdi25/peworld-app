@@ -1,11 +1,11 @@
 "use server";
 import { url } from "@/helpers/url";
 import getCookie from "./geCookie";
-
-export const getWorkers = async () => {
+// import { cookies } from "next/headers";
+export const getRecruiter = async () => {
   try {
     const token = await getCookie("token");
-    const response = await fetch(`${url}/v1/workers/`, {
+    const response = await fetch(`${url}/v1/recruiters/profile`, {
       headers: {
         "Content-Type": "application/json",
         ...(token ? { Cookie: `token=${token};path=/;expires=Session` } : {}),
@@ -20,38 +20,16 @@ export const getWorkers = async () => {
     return Promise.reject(error.message);
   }
 };
-export const getProfile = async () => {
-  // if (!token) return redirect("/auth/login");
-
+export const editRecruiter = async (form) => {
   try {
     const token = await getCookie("token");
-    const response = await fetch(`${url}/v1/workers/profile`, {
+    const response = await fetch(`${url}/v1/recruiters/profile`, {
       headers: {
         "Content-Type": "application/json",
         ...(token ? { Cookie: `token=${token};path=/;expires=Session` } : {}),
       },
-      method: "GET",
-      credentials: "include",
-      cache: "no-store",
-    });
-    const data = await response.json();
-    return data.data;
-  } catch (error) {
-    return Promise.reject(error.message);
-  }
-};
-
-export const getDetailWorkers = async (id) => {
-  // if (!token) return redirect("/login/worker");
-
-  try {
-    const token = await getCookie("token");
-    const response = await fetch(`${url}/v1/workers/${id}`, {
-      headers: {
-        "Content-Type": "application/json",
-        // ...(token ? { Cookie: `token=${token};path=/;expires=Session` } : {}),
-        Cookie: `token=${token};path=/;expires=Session`,
-      },
+      method: "PUT",
+      body: JSON.stringify(form),
       credentials: "include",
       cache: "no-store",
     });

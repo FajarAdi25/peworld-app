@@ -1,21 +1,21 @@
+"use server";
 import { url } from "@/helpers/url";
-import { cookies } from "next/headers";
-const getCookie = async (name) => {
-  return cookies().get(name)?.value ?? "";
-};
+import getCookie from "./geCookie";
 
-export const getUser = async () => {
+export const addPortfolio = async (form) => {
   try {
     const token = await getCookie("token");
-    const response = await fetch(`${url}/v1/users/`, {
+    const response = await fetch(`${url}/v1/portfolio/`, {
       headers: {
         "Content-Type": "application/json",
         ...(token ? { Cookie: `token=${token};path=/;expires=Session` } : {}),
       },
+      method: "POST",
+      body: JSON.stringify(form),
       credentials: "include",
-      cache: "no-store",
     });
     const data = await response.json();
+    console.log(data);
     return data;
   } catch (error) {
     return Promise.reject(error.message);

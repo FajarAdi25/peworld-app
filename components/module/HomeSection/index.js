@@ -1,29 +1,40 @@
-// "use client";
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import SearchBar from "../SearchBar";
 import Link from "next/link";
 import Image from "next/image";
 import { FaMapPin } from "react-icons/fa";
-// import { getWorkers } from "@/services/worker";
+import { getWorkers } from "@/services/worker";
 // import { getSkills } from "@/services/skill";
 
-const HomeSection = async ({ dataWorkers, dataSkills }) => {
-  // const [skills, setSkills] = useState([]);
+const HomeSection = () => {
+  const [workerData, setWorkerData] = useState([]);
 
+  const getUser = async () => {
+    try {
+      const response = await getWorkers();
+      setWorkerData(response);
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   // const workerData = await getWorkers();
   // const skillData = await getSkills();
+  // const workerData = await getWorkers();
+  // const workerData = await dataWorkers;
+  // const skillData = await dataSkills;
 
-  const workerData = await dataWorkers;
-  const skillData = await dataSkills;
-  // console.log(workerData);
-
+  useEffect(() => {
+    getUser();
+  }, []);
   return (
     <section className="pt-12 bg-[#F6F7F8] min-h-screen">
       <div className="w-[87vw] px-10 rounded-sm justify-center  mx-auto grid h-13 py-1 items-center">
         <SearchBar />
 
         <div className="divide-y mt-12 divide-gray-300 w-[88%] mx-auto rounded-md overflow-hidden min-h-[85vh]">
-          {workerData?.map((item) => (
+          {workerData.map((item) => (
             <article
               className="flex justify-between bg-white px-6 py-9 items-center"
               key={item.id}
@@ -62,14 +73,14 @@ const HomeSection = async ({ dataWorkers, dataSkills }) => {
 
                   <div className="text-white flex flex-wrap gap-x-3 gap-y-4 pr-4 text-sm mt-5">
                     {/* <p>bagian skill</p> */}
-                    {skillData.map((item, index) => (
+                    {/* {skillData.data.map((item, index) => (
                       <span
                         key={index}
                         className="py-1 px-4 bg-[#fbb01799] hover:bg-[#FBB017] border border-[#FBB017] rounded"
                       >
                         {item.skill_name}
                       </span>
-                    ))}
+                    ))} */}
                   </div>
                 </div>
               </div>
