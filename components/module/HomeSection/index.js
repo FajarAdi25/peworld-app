@@ -78,11 +78,6 @@ const HomeSection = () => {
           <div className="flex items-center -pl-4 text-xs sm:text-base">
             <div className="h-11 w-[1px] ml-7 mr-2 bg-gray-300"></div>
 
-            {/* <button className="flex font-semibold justify-center items-center bg-white hover:bg-gray-50  h-6 sm:h-11 w-[12vw] sm:w-[8vw] gap-2 text-gray-500">
-              <FaChevronUp className={`w-[1.1vw] h-[1.1vw] mt-1 `} />
-              Sort
-            </button> */}
-
             {sort === "ASC" ? (
               <button
                 onClick={() => setSort("DESC")}

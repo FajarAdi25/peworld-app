@@ -15,7 +15,7 @@ export const getHireCompany = async () => {
       cache: "no-cache",
     });
     const data = await response.json();
-    console.log(data);
+    console.log(data.data);
     return data.data;
   } catch (error) {
     return Promise.reject(error.message);

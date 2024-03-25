@@ -14,7 +14,7 @@ const HeroSection = () => {
           Selamat datang di platform pencarian kerja kami
         </p>
         <Link
-          href="/"
+          href="/main/home"
           className="mt-10 block w-fit rounded bg-[#5E50A1] px-3.5 pt-2 pb-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#5E50A1]/90"
         >
           Mulai Dari Sekarang

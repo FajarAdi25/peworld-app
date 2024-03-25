@@ -1,4 +1,5 @@
 "use client";
+import { getHireWorker } from "@/services/notification";
 import React, { useEffect, useState } from "react";
 import { FaUser } from "react-icons/fa";
 
@@ -8,7 +9,7 @@ const NotificationWorker = () => {
     try {
       const response = await getHireWorker();
       setHire(response);
-      console.log(response);
+      // console.log(response);
     } catch (error) {
       console.error(error);
     }
@@ -24,8 +25,8 @@ const NotificationWorker = () => {
           Jobs
         </h1>
       </div>
-      {hire.map((worker, index) => (
-        <div key={index} style={{ display: "flex", marginTop: 10 }}>
+      {hire.map((worker) => (
+        <div key={worker.id} style={{ display: "flex", marginTop: 10 }}>
           <FaUser style={{ height: 90, width: 90, marginRight: 170 }} />
           <div>
             <div style={{ display: "flex" }}>

@@ -41,3 +41,21 @@ export const getSkills = async () => {
     return Promise.reject(error.message);
   }
 };
+export const getSkillsDetailWorker = async (id) => {
+  try {
+    const token = await getCookie("token");
+    const response = await fetch(`${url}/v1/skills/${id}`, {
+      headers: {
+        "Content-Type": "application/json",
+        ...(token ? { Cookie: `token=${token};path=/;expires=Session` } : {}),
+      },
+      method: "GET",
+      credentials: "include",
+      cache: "no-store",
+    });
+    const data = await response.json();
+    return data.data;
+  } catch (error) {
+    return Promise.reject(error.message);
+  }
+};

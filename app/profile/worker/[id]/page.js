@@ -1,10 +1,10 @@
 "use client";
-import { url } from "@/helpers/url";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { FaEnvelope, FaMapPin, FaPencilAlt } from "react-icons/fa";
 import Link from "next/link";
-import axios from "axios";
+import { getDetailWorkers } from "@/services/worker";
+import { getSkillsDetailWorker } from "@/services/skill";
 
 const SelectedWorker = ({ params: { id } }) => {
   //   const id = params.id;
@@ -12,19 +12,23 @@ const SelectedWorker = ({ params: { id } }) => {
   const [skills, setSkills] = useState([]);
 
   const getWorker = async () => {
-    const result = await axios.get(`${url}/v1/workers/${id}`);
-    setUser(result.data.data);
-  };
-
-  const getSkills = async () => {
     try {
-      const result = await axios.get(`${url}/v1/skills/${id}`);
-      setSkills(result.data.data);
-    } catch (err) {
-      throw new Error(err);
+      const response = await getDetailWorkers(id);
+      setUser(response);
+      console.log(response);
+    } catch (error) {
+      console.error(error);
     }
   };
-
+  const getSkills = async () => {
+    try {
+      const response = await getSkillsDetailWorker(id);
+      setSkills(response);
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
+  };
   //   console.log(skills);
   useEffect(() => {
     getWorker();
@@ -33,9 +37,9 @@ const SelectedWorker = ({ params: { id } }) => {
   return (
     <main className="bg-[#9EA0A5]/30 w-screen grid justify-center pt-20 pb-40">
       <div className="bg-[#5E50A1] w-[87vw] h-[20vw] grid justify-end items-end rounded-t-lg ">
-        <button className="flex text-white items-center my-1 py-2 px-6 gap-2 font-semibold">
+        {/* <button className="flex text-white items-center my-1 py-2 px-6 gap-2 font-semibold">
           <FaPencilAlt className="w-[1.3vw] h-[1.3vw]" /> Ubah Latar
-        </button>
+        </button> */}
       </div>
 
       <div className="bg-white w-[87vw] pb-16 rounded-b-lg">

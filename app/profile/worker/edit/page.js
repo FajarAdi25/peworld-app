@@ -79,9 +79,9 @@ const EditWorker = () => {
               <div className="px-3 lg:px-10 py-8">
                 <div className="grid justify-center gap-4">
                   <div className="relative w-[10vw] h-[10vw] mx-auto">
-                    {profile.photo ? (
+                    {worker.photo ? (
                       <Image
-                        src={profile.photo}
+                        src={worker.photo}
                         alt="avatar"
                         fill
                         className="object-cover rounded-full "

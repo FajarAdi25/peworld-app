@@ -68,11 +68,12 @@ export const getDetailWorkers = async (id) => {
         // ...(token ? { Cookie: `token=${token};path=/;expires=Session` } : {}),
         Cookie: `token=${token};path=/;expires=Session`,
       },
+      method: "GET",
       credentials: "include",
       cache: "no-store",
     });
     const data = await response.json();
-    return data;
+    return data.data;
   } catch (error) {
     return Promise.reject(error.message);
   }
